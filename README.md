@@ -65,7 +65,7 @@
 
 ## 改版作者
 -   作者[BGYdook](https://github.com/BGYdook/)
--   仓库[GitHub](https://github.com/BGYdook/astrbot_plugin_sign-BGYdook改版)
+-   仓库[GitHub](https://github.com/BGYdook/astrbot_plugin_sign-BGYdook)
 
 
 ## 🤝 感谢

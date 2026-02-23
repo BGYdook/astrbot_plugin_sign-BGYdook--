@@ -8,8 +8,7 @@ from .database import SignDatabase
 from .image_generator import ImageGenerator
 from .sign_manager import SignManager
 
-@register("astrbot_plugin_sign", "BGYdook", "一个签到插件", "1.0.0", 
-          help="发送 签到 进行每日签到，发送 签到帮助 查看所有功能")
+@register("astrbot_plugin_sign", "BGYdook", "一个签到插件", "1.0.0")
 class SignPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
