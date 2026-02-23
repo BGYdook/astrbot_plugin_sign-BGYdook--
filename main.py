@@ -33,7 +33,7 @@ class SignPlugin(Star):
         '''每日签到 - 监听消息事件'''
         try:
             # 获取原始消息内容
-            msg = event.get_message_content()
+            msg = event.message_str
             
             # 防止日常聊天误触发，严格匹配条件
             # 1. 去除前后空白字符
@@ -108,7 +108,7 @@ class SignPlugin(Star):
     async def user_info(self, event: AstrMessageEvent):
         '''查询个人信息'''
         try:
-            msg = event.get_message_content()
+            msg = event.message_str
             clean_msg = msg.strip()
             
             # 只响应完全等于"信息"的消息
@@ -152,7 +152,7 @@ class SignPlugin(Star):
     async def ranking(self, event: AstrMessageEvent):
         '''签到排行榜'''
         try:
-            msg = event.get_message_content()
+            msg = event.message_str
             clean_msg = msg.strip()
             
             if clean_msg != "排行":
@@ -187,7 +187,7 @@ class SignPlugin(Star):
     async def sign_help(self, event: AstrMessageEvent):
         '''签到帮助'''
         try:
-            msg = event.get_message_content()
+            msg = event.message_str
             clean_msg = msg.strip()
             
             if clean_msg != "签到帮助":
@@ -229,7 +229,7 @@ class SignPlugin(Star):
     async def fortune_history(self, event: AstrMessageEvent):
         '''运势历史'''
         try:
-            msg = event.get_message_content()
+            msg = event.message_str
             clean_msg = msg.strip()
             
             if clean_msg != "运势历史":
