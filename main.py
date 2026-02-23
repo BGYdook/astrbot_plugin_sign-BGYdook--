@@ -28,7 +28,7 @@ class SignPlugin(Star):
         """获取插件帮助信息，供AstrBot显示"""
         return "\n".join(self.available_commands)
         
-    @filter.on_message()
+    @filter.event_message_type(filter.EventMessageType.ALL)
     async def sign(self, event: AstrMessageEvent):
         '''每日签到 - 监听消息事件'''
         try:
@@ -104,7 +104,7 @@ class SignPlugin(Star):
             logger.error(f"签到失败: {str(e)}")
             yield event.plain_result("签到失败了喵~请联系管理员检查日志")
 
-    @filter.on_message()
+    @filter.event_message_type(filter.EventMessageType.ALL)
     async def user_info(self, event: AstrMessageEvent):
         '''查询个人信息'''
         try:
@@ -148,7 +148,7 @@ class SignPlugin(Star):
             logger.error(f"查询信息失败: {str(e)}")
             yield event.plain_result("查询信息失败了喵~请联系管理员检查日志")
 
-    @filter.on_message()
+    @filter.event_message_type(filter.EventMessageType.ALL)
     async def ranking(self, event: AstrMessageEvent):
         '''签到排行榜'''
         try:
@@ -183,7 +183,7 @@ class SignPlugin(Star):
             logger.error(f"查询排行失败: {str(e)}")
             yield event.plain_result("查询排行失败了喵~请联系管理员检查日志")
 
-    @filter.on_message()
+    @filter.event_message_type(filter.EventMessageType.ALL)
     async def sign_help(self, event: AstrMessageEvent):
         '''签到帮助'''
         try:
@@ -225,7 +225,7 @@ class SignPlugin(Star):
             logger.error(f"显示帮助失败: {str(e)}")
             yield event.plain_result("显示帮助失败了喵~请联系管理员检查日志")
 
-    @filter.on_message()
+    @filter.event_message_type(filter.EventMessageType.ALL)
     async def fortune_history(self, event: AstrMessageEvent):
         '''运势历史'''
         try:
