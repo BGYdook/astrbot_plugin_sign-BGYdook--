@@ -1,0 +1,6 @@
+name: astrbot_plugin_sign
+desc: 基础的签到系统，支持每日签到、金币系统、排行榜等功能，以及占卜功能。使用事件监听器模式，无需前缀即可使用。功能：签到、信息、排行、运势历史、签到帮助
+help: 直接发送 签到 即可签到，发送 签到帮助 查看所有功能。支持事件监听器模式，无需斜杠前缀。
+version: v1.0.0
+author: BGYdook改版
+repo: https://github.com/BGYdook/astrbot_plugin_sign-BGYdook改版
